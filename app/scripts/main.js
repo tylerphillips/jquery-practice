@@ -74,6 +74,23 @@ $(":checked"); // selected checkboxes or radio buttons
  	// you can also pass a second argument to attr() to set an attribute value:
  	$("#elem").attr("title", "This is the new title");
 
+// SHOWING AND HIDING ELEMENTS
+
+// show() is a simple way to make an element or set of elements visible
+$("div").show(); // makes all <div> elements visible
+  // however, you can add some additional parameters to spice up the transition
+  $("#elem2").show("fast", function(){
+  	// do something once the element is shown
+  });
+
+// hide() method is the opposite of show(), allowing you to make elements invisible with the same optional arguments as you saw for show()
+$("#elem-hide").hide("slow", function(){
+	// do something once the element is hidden
+});
+
+// toggle() method changes the current state of an element or collection of elements;
+// it makes visible any element in the collection that is currently hidden and hides any that are currently being shown
+
 
 
 
