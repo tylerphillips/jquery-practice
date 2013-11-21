@@ -93,7 +93,7 @@ $(":checked"); // selected checkboxes or radio buttons
 
 // ANIMATING ELEMENTS
 
-	// FADDING
+	// FADING
 	  // You can fade an element in or out, optionally setting the transition duration and adding a callback function
 
 	  // To fade out to invisibility:
@@ -135,13 +135,27 @@ $(":checked"); // selected checkboxes or radio buttons
 	  $("#elem-Animate").animate(
 	  {
 	  	width: "400px",
-	  	height: "500px",
+	  	height: "100px",
 		  }, 1500, function(){
 	  			$(this).fadeIn("slow");
 		  }
-
 	  );
 
+// COMMAND CHAINING
+
+$("#elem-fadeOutIn").fadeOut("slow").fadeIn("slow");
+$("#elem-textFadeOutIn").text("Hello from jQuery").fadeOut("slow").fadeIn("slow");
+
+// A simple jQuery animation
+$("#animateMe").text("Changing shape...").animate(
+	{
+		width: "400px",
+		height: "200px"
+	}, 5000, function(){
+		//callback function
+		$(this).text("Fading away...").fadeOut(4000);
+	}
+);
 
 
 
