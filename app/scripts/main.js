@@ -41,28 +41,39 @@ $(":checked"); // selected checkboxes or radio buttons
 	// The html() and text() methods all you to get and set the content of any elements you've selected using the previous statements
 	// while attr() lets you get and set the values of individual element attributes
 
-// html() works pretty much like JavaScript's innerHTML:
-var htmlContent = $("#elem").html();
-  // * variable htmlContent now contains all HTML
-  // (including text) inside page element with id "elem" *
+  // html() works pretty much like JavaScript's innerHTML:
+	var htmlContent = $("#elem").html();
+	  // * variable htmlContent now contains all HTML
+	  // (including text) inside page element with id "elem" *
 
-// Using similar syntax, you can set the HTML content of a specified element or collection of elements:
-$("#elem").html("<p>Here is some new content.</p>");
-  // * page element with id "elem" has had its HTML content replaced *
+	// Using similar syntax, you can set the HTML content of a specified element or collection of elements:
+	$("#elem").html("<p>Here is some new content.</p>");
+	  // * page element with id "elem" has had its HTML content replaced *
 
-// text() allows you to get only text content of an element or collection of elements, without the HTML:
-var textContent = $("#elem").text();
-  // * variable textContent contains all the text (but not HTML) content
-  // from inside a page element with id "elem" *
+  // text() allows you to get only text content of an element or collection of elements, without the HTML:
+	var textContent = $("#elem").text();
+	  // * variable textContent contains all the text (but not HTML) content
+	  // from inside a page element with id "elem" *
 
-// Once more you can change the text content of the specified element(s):
-$("#elem").text("Here is some content.");
-  // * page element with id "elem" has had its text content replaced
+	// Once more you can change the text content of the specified element(s):
+	$("#elem").text("Here is some content.");
+	  // * page element with id "elem" has had its text content replaced
 
-// If you want to append content to an element rather than replace it:
-$("#elem").append("<p>Here is some new content.</p>");
-  // * keeps current content intact but adds new content to the end *
+	// If you want to append content to an element rather than replace it:
+	$("#elem").append("<p>Here is some new content.</p>");
+	  // * keeps current content intact but adds new content to the end *
 
-// and likewise,
-$("div").append("<p>Here is some new content.</p>")
-  // * add the same content to all <div> elements on the page * 
+	// and likewise,
+	$("div").append("<p>Here is some new content.</p>");
+	  // * add the same content to all <div> elements on the page *
+
+  // attr() method gets the value for the specified attribute 
+  	var title = $("#elem").attr("title");
+  	  // if applied to a set of elements, it returns the value for only the first element in the matched set
+
+ 	// you can also pass a second argument to attr() to set an attribute value:
+ 	$("#elem").attr("title", "This is the new title");
+
+
+
+
