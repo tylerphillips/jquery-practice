@@ -76,20 +76,71 @@ $(":checked"); // selected checkboxes or radio buttons
 
 // SHOWING AND HIDING ELEMENTS
 
-// show() is a simple way to make an element or set of elements visible
-$("div").show(); // makes all <div> elements visible
-  // however, you can add some additional parameters to spice up the transition
-  $("#elem2").show("fast", function(){
-  	// do something once the element is shown
-  });
+	// show() is a simple way to make an element or set of elements visible
+	$("div").show(); // makes all <div> elements visible
+	  // however, you can add some additional parameters to spice up the transition
+	  $("#elem2").show("fast", function(){
+	  	// do something once the element is shown
+	  });
 
-// hide() method is the opposite of show(), allowing you to make elements invisible with the same optional arguments as you saw for show()
-$("#elem-hide").hide("slow", function(){
-	// do something once the element is hidden
-});
+	// hide() method is the opposite of show(), allowing you to make elements invisible with the same optional arguments as you saw for show()
+	$("#elem-hide").hide("slow", function(){
+		// do something once the element is hidden
+	});
 
-// toggle() method changes the current state of an element or collection of elements;
-// it makes visible any element in the collection that is currently hidden and hides any that are currently being shown
+	// toggle() method changes the current state of an element or collection of elements;
+	// it makes visible any element in the collection that is currently hidden and hides any that are currently being shown
+
+// ANIMATING ELEMENTS
+
+	// FADDING
+	  // You can fade an element in or out, optionally setting the transition duration and adding a callback function
+
+	  // To fade out to invisibility:
+	  $("#elem-fadeOut").fadeOut("slow", function(){
+	  	// do something after fadeOut has finished executing
+	  });
+
+	  // To fade out to invisibility:
+	  $("#elem-fadeIn").fadeIn(500, function(){
+	  	// do something after fadeIn has finished executing
+	  });
+
+	  // You can also fade an element only partially, either in or out:
+	  $("#elem-partialFade").fadeTo(3000, 0.5, function(){
+	  	// do something after fade has finish edexecuting
+	  });
+
+	// SLIDING
+	  // You can slide elements, or collections of elements, upward or downward.
+
+	  // To slide down:
+	  $("#elem-slideDown").slideDown(150, function(){
+	  	// do something after slideDown has finished executing
+	  });
+
+	  // To slide up:
+	  $("#elem-slideUp").slideUp("slow", function(){
+	  	// do something after slideUp has finished executing
+	  });
+
+	  // slideToggle() is in case you need to slide an element up or down depending on its current state
+	  $("#elem-slideUp").slideToggle(1000, function(){
+	  	// do something after slideUp has finished executing
+	  });
+
+	// * ANIMATE *
+	  
+	  // to animate an element, you do so by using JQuery to specify the CSS styles that the item should have applied
+	  $("#elem-Animate").animate(
+	  {
+	  	width: "400px",
+	  	height: "500px",
+		  }, 1500, function(){
+	  			$(this).fadeIn("slow");
+		  }
+
+	  );
 
 
 
